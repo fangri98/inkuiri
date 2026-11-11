@@ -1,0 +1,672 @@
+
+:root {
+    /* WARNA UTAMA */
+    --primary-color: #183D2A;
+    --secondary-color: #4e6151;
+
+    /* WARNA TEKS */
+    --text-color: #526354;
+    --text-muted: #647267;
+    --text-secondary: #718074;
+    --text-light: #899489;
+
+    /* BACKGROUND */
+    --bg-color: #F5F5EF;
+    --bg-section: #E8EFE5;
+    --bg-white: #FFFFFF;
+    --bg-secondary: #F0F1ED;
+    --bg-tertiary: #F4EBDD;
+
+    /* BORDER */
+    --border-color: #E1E8DE;
+    --border-light: #E8EDE6;
+    --border-accent: #D9E4D5;
+
+    /* FOOTER */
+    --footer-text: #D5E1D3;
+    --footer-muted: #A8BBA9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--bg-color);
+}
+
+.logo {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* KOMPONEN UMUM */
+
+.subtitle {
+    color: var(--secondary-color);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: var(--text-secondary);
+}
+
+/* BERANDA */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 90px 8%;
+    background-color: var(--bg-section);
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--secondary-color);
+}
+
+.hero-description {
+    max-width: 480px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 380px;
+    min-height: 300px;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+}
+
+.image-decoration {
+    color: var(--bg-white);
+    text-align: center;
+}
+
+.image-decoration h2 {
+    margin-bottom: 5px;
+}
+
+.image-decoration p {
+    font-size: 14px;
+}
+
+/* ABOUT */
+
+.about,
+.team {
+    padding: 80px 8%;
+}
+
+.about-description {
+    max-width: 750px;
+    margin: auto;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.8;
+}
+
+.about-project {
+    padding: 80px 15%;
+    background-color: var(--bg-section);
+}
+
+.project-content {
+    max-width: 750px;
+    margin: auto;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* PROFIL TIM */
+
+.team-card img.profil {
+    width: 150px;
+    height: 150px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.team-card {
+    overflow: hidden;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-info h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.team-info p {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.team-info span {
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+/* GRAFIK SAMPAH */
+
+.waste-header {
+    padding: 70px 8%;
+    text-align: center;
+    background-color: var(--bg-section);
+}
+
+.waste-header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.waste-header > p:not(.subtitle) {
+    max-width: 650px;
+    margin: auto;
+    color: var(--text-muted);
+}
+
+.waste-stats {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 40px;
+}
+
+.stat-item h2 {
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+.stat-item p {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.waste-section-heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.waste-section-heading h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.waste-section-heading > p:last-child {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.ranking-section,
+.daily-section {
+    padding: 80px 8%;
+}
+
+/* RANKING */
+
+.ranking-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.ranking-card {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.ranking-card:hover {
+    transform: translateY(-5px);
+}
+
+.rank-first {
+    background-color: var(--bg-section);
+    border-color: var(--secondary-color);
+}
+
+.rank-second {
+    background-color: var(--bg-secondary);
+}
+
+.rank-third {
+    background-color: var(--bg-tertiary);
+}
+
+.rank-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.rank-label {
+    color: var(--secondary-color);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.ranking-card h3 {
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.ranking-card h2 {
+    color: var(--primary-color);
+    font-size: 32px;
+}
+
+.ranking-card h2 span {
+    font-size: 14px;
+}
+
+.rank-detail {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.ranking-note,
+.table-note {
+    margin-top: 20px;
+    color: var(--text-light);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* TABEL MINGGUAN */
+
+.weekly-section {
+    padding: 80px 8%;
+    background-color: var(--bg-section);
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.weekly-table,
+.daily-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.weekly-table {
+    min-width: 600px;
+}
+
+.daily-table {
+    min-width: 1250px;
+}
+
+.weekly-table th,
+.weekly-table td,
+.daily-table th,
+.daily-table td {
+    padding: 15px 18px;
+    border-bottom: 1px solid var(--border-light);
+    text-align: center;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.weekly-table thead,
+.daily-table thead {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+.weekly-table tbody tr:nth-child(even),
+.daily-table tbody tr:nth-child(even) {
+    background-color: var(--bg-color);
+}
+
+.weekly-table tbody tr:hover,
+.daily-table tbody tr:hover {
+    background-color: var(--bg-section);
+}
+
+.weekly-table td,
+.daily-table td {
+    color: var(--text-color);
+}
+
+.weekly-table td:first-child,
+.daily-table td:nth-child(11) {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* PAI */
+
+.pai-hero {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: var(--bg-section);
+}
+
+.pai-hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.pai-hero h1 span {
+    color: var(--secondary-color);
+}
+
+.pai-hero > p:not(.subtitle) {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: var(--text-muted);
+}
+
+.hadith-section {
+    padding: 80px 10%;
+}
+
+.hadith-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 50px 30px;
+    text-align: center;
+    background-color: var(--bg-section);
+    border: 1px solid var(--border-accent);
+    border-radius: 16px;
+}
+
+.hadith-label {
+    color: var(--secondary-color);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.hadith-arabic {
+    color: var(--primary-color);
+    font-size: 38px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.hadith-latin {
+    color: var(--secondary-color);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.hadith-divider {
+    width: 70px;
+    height: 2px;
+    margin: 25px auto;
+    background-color: var(--secondary-color);
+}
+
+.hadith-card h3 {
+    color: var(--primary-color);
+    font-size: 21px;
+}
+
+.hadith-source {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.hadith-explanation {
+    padding: 80px 15%;
+}
+
+.explanation-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.explanation-content p {
+    color: var(--text-muted);
+    line-height: 1.9;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* ISLAM DAN LINGKUNGAN */
+
+.islam-environment {
+    padding: 80px 8%;
+    background-color: var(--bg-section);
+}
+
+.islam-action-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.islam-action-card {
+    padding: 30px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.islam-action-card:hover {
+    transform: translateY(-5px);
+}
+
+.islam-action-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.islam-action-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.islam-conclusion {
+    padding: 75px 15%;
+    text-align: center;
+    background-color: var(--bg-section);
+}
+
+.islam-conclusion h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.islam-conclusion > p:last-child {
+    max-width: 750px;
+    margin: auto;
+    color: var(--text-muted);
+    line-height: 1.9;
+}
+
+/* SUMBER PAI */
+
+.pai-sources {
+    padding: 35px 10%;
+    background-color: var(--bg-color);
+}
+
+.pai-sources h3 {
+    margin-bottom: 12px;
+}
+
+.pai-sources ul {
+    padding-left: 20px;
+}
+
+.pai-sources li {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.pai-sources a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.pai-sources a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 35px 20px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+.footer h3 {
+    margin-bottom: 8px;
+}
+
+.footer p {
+    color: var(--footer-text);
+    font-size: 13px;
+}
+
+.footer span {
+    display: block;
+    margin-top: 20px;
+    color: var(--footer-muted);
+    font-size: 12px;
+}
